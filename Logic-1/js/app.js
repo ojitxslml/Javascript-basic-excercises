@@ -47,9 +47,7 @@ const cortarCaracteres = (string, number) =>{
     const caracteres = string.split("");
     try{
         caracteres.length = caracteres.length - number;
-        caracteres.forEach(element => {
-            cortado += element;
-        });
+        cortado = caracteres.join("");
     }catch(e){
         return(e);
     }
