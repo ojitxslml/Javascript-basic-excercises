@@ -59,17 +59,18 @@ const cortarCaracteres = (string, number) =>{
 // ') devolverá ['hola', 'que', 'tal'].
 
 const e3_String = document.getElementById("e3_string");
+const e3_String2 = document.getElementById("e3_string2");
 const e3_btn = document.getElementById("e3_btn");
 
 e3_btn.addEventListener("click", (item) =>{
     item.preventDefault();
-    alert(cortarPalabras(e3_String.value));
+    alert(cortarPalabras(e3_String.value, e3_String2.value));
 });
 
-const cortarPalabras = (string) =>{
+const cortarPalabras = (string, separador) =>{
     let palabras = [];
     if(getInputType(string) === "string"){
-        palabras = string.split(" ");
+        palabras = string.split(separador);
     }else if(getInputType(string) === "" ){
         alert("Ingrese un valor 👻");  
     }else{
