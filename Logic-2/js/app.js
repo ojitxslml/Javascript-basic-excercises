@@ -63,7 +63,7 @@ const esPalindromo = (string) =>{
     array.forEach(element => {
         alreves += element;
     });
-    if(alreves===string){
+    if(alreves==string){
         return true;
     }else{
         return false;
