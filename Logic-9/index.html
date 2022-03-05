@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Ejercicios JS</title>
+  </head>
+  <body onLoad="myOnLoad()">
+    <main>
+      <section>
+        <h1>Ejercicios Javascript 9</h1>
+      </section>
+      <section class="e27">
+        <h2>Vigesimoseptimo Ejercicio</h2>
+        <h3>
+          <pre>
+  Programa una clase llamada Pelicula.
+  La clase recibirá un objeto al momento de instanciarse con los siguentes datos: id de la película en IMDB
+  , titulo, director, año de estreno, país o países de origen, géneros y calificación en IMBD.
+  - Todos los datos del objeto son obligatorios.
+  - Valida que el id IMDB tenga 9 caracteres, los primeros 2 sean letras y los 
+     7 restantes números.
+  - Valida que el título no rebase los 100 caracteres.
+  - Valida que el director no rebase los 50 caracteres.
+  - Valida que el año de estreno sea un número entero de 4 dígitos.
+  - Valida que el país o paises sea introducidos en forma de arreglo.
+  - Valida que los géneros sean introducidos en forma de arreglo.
+  - Valida que los géneros introducidos esten dentro de los géneros 
+     aceptados*.
+  - Crea un método estático que devuelva los géneros aceptados*.
+  - Valida que la calificación sea un número entre 0 y 10 pudiendo ser 
+    decimal de una posición.
+  - Crea un método que devuelva toda la ficha técnica de la película.
+  - Apartir de un arreglo con la información de 3 películas genera 3 
+    instancias de la clase de forma automatizada e imprime la ficha técnica 
+    de cada película. 
+  </pre
+          >
+        </h3>
+        <div>
+          <form action="" id="form" class="grid">
+            <div class="g1">
+              <label for="e27_id">ID:</label>
+              <input
+                type="text"
+                name="e27_id"
+                id="e27_id"
+                placeholder="Ingrese id de la pelicula (IMDB)"
+              />
+            </div>
+            <div class="g2">
+              <label for="e27_titulo">Titulo:</label>
+              <input
+                type="text"
+                name="e27_titulo"
+                id="e27_titulo"
+                placeholder="Ingrese titulo"
+              />
+            </div>
+            <div class="g3">
+              <label for="e27_director">Director:</label>
+              <input
+                type="text"
+                name="e27_director"
+                id="e27_director"
+                placeholder="Ingrese director"
+              />
+            </div>
+            <div class="g35">
+              <label for="e27_calific">Calificación:</label>
+              <input
+                class="calificacion"
+                type="text"
+                name="e27_calific"
+                id="e27_calific"
+                placeholder="ej: 8.5"
+              />
+            </div>
+            <div class="g4">
+              <label for="e27_estreno">Estreno:</label>
+              <input
+                type="number"
+                name="e27_estreno"
+                id="e27_estreno"
+                placeholder="Ingrese fecha de estreno"
+              />
+            </div>
+            <div class="g5">
+              <label for="e27_pais">País:</label>
+              <input
+                type="text"
+                name="e27_pais"
+                id="e27_pais"
+                placeholder="Ingrese país o países de origen"
+              />
+              <button id="e27_btnPais">Añadir país</button>
+              <div>
+                <ul class="paises">
+                  Paises:
+                </ul>
+              </div>
+            </div>
+            <div class="g6">
+              <label for="e27_genero">Generos:</label>
+              <select name="e27_genero" id="e27_genero">
+                <option value="">--Seleccione Genero--</option>
+              </select>
+              <button id="e27_btnGenero">Añadir genero</button>
+              <ul class="generos">
+                Generos:
+              </ul>
+            </div>
+            <div class="g7">
+              <button id="e27_btn">Enviar</button>
+            </div>
+          </form>
+        </div>
+        <div class="ficha">
+          <h4>Fichas tecnicas:</h4>
+        </div>
+      </section>
+    </main>
+    <template id="template">
+      <li class="gen">
+        <span class="tp_text">genero</span>
+        <button class="tp_btn">Quitar</button>
+      </li>
+    </template>
+    <template id="templateFicha">
+      <div class="gen2">
+        <p class="id">ID</p>
+        <p class="titulo">Titulo</p>
+        <p class="director">Director</p>
+        <p class="estreno">Estreno</p>
+        <p class="calificacion">Calificacion</p>
+        <p class="pais">Paises</p>
+        <p class="generos">Generos</p>
+        <button class="eliminarPeli">Eliminar</button>
+      </div>
+    </template>
+    <script src="js/app.js"></script>
+  </body>
+</html>
